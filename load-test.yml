@@ -1,0 +1,13 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 1
+      arrivalRate: 10000
+      name: "Стрессовый тест"
+
+scenarios:
+  - flow:
+      - put:
+          url: "/user/1/balance"
+          json:
+            amount: -2
